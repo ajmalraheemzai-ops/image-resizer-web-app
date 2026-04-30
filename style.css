@@ -1,0 +1,157 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  max-width: 420px;
+  text-align: center;
+}
+
+/* Glass Card */
+.wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(15px);
+  border-radius: 15px;
+  padding: 25px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+  transition: 0.3s;
+}
+
+.wrapper h2 {
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.upload-box {
+  height: 200px;
+  border: 2px dashed rgba(255,255,255,0.5);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.upload-box:hover {
+  background: rgba(255,255,255,0.1);
+}
+
+.upload-box img {
+  width: 60px;
+  opacity: 0.8;
+}
+
+.upload-box p {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.wrapper.active .upload-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.wrapper.active .upload-box p {
+  display: none;
+}
+
+.content {
+  opacity: 0;
+  margin-top: 20px;
+  pointer-events: none;
+}
+
+.wrapper.active .content {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Inputs */
+.row {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+.column {
+  flex: 1;
+}
+
+label {
+  font-size: 13px;
+}
+
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  margin-top: 5px;
+  outline: none;
+}
+
+.checkboxes {
+  justify-content: space-between;
+  align-items: center;
+}
+
+.checkboxes input {
+  margin-right: 5px;
+}
+
+/* Button */
+.download-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 20px;
+  border-radius: 10px;
+  border: none;
+  background: #ff7a18;
+  background: linear-gradient(45deg, #ff7a18, #ffb347);
+  color: #fff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.download-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  color: #fff;
+}
+
+footer p {
+  font-size: 13px;
+  margin-bottom: 10px;
+}
+
+.socials a {
+  color: #fff;
+  margin: 0 8px;
+  font-size: 18px;
+  transition: 0.3s;
+}
+
+.socials a:hover {
+  color: #ffb347;
+}
